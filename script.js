@@ -16,16 +16,30 @@ function decreaseNum(){
   counterValue -= 1;
   console.log('decreaseValue');
   theNum.innerHTML = counterValue;
+  changeNumColor();
 };
 
 function increaseNum(){
   counterValue += 1;
   console.log('increaseValue');
   theNum.innerHTML = counterValue;
+  changeNumColor();
 };
 
 function resetNum(){
   counterValue = 0;
   console.log('resetValue');
   theNum.innerHTML = counterValue;
+  changeNumColor();
 };
+
+function changeNumColor(){
+  if(counterValue > 0){
+    theNum.style.color = 'Blue';
+  } else if(counterValue < 0){
+    theNum.style.color = 'Red';
+  } else{
+    theNum.style.color = 'Black';
+  }
+
+}
